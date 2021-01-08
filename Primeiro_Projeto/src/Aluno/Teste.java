@@ -24,10 +24,13 @@ public class Teste {
 			List<Aluno> alunos = new ArrayList<Aluno>();
 
 			HashMap<String, List<Aluno>> maps = new HashMap<String, List<Aluno>>();
-
+            
+			String N = JOptionPane.showInputDialog("Quantos alunos irá cadastrar?");
+			int n = Integer.valueOf(N);
+			
 			JOptionPane.showMessageDialog(null, "Iniciando o cadastro dos alunos");
 
-			for (int qtde = 0; qtde < 2; qtde++) {
+			for (int qtde = 0; qtde < n; qtde++) {
 
 				String nome = JOptionPane.showInputDialog("Nome do aluno " + (qtde + 1));
 				String idade = JOptionPane.showInputDialog("Idade");
@@ -57,7 +60,7 @@ public class Teste {
 
 					Disciplina disciplina = new Disciplina();
 
-					String nomeDisciplina = JOptionPane.showInputDialog("Disciplina " + pos);
+					String nomeDisciplina = JOptionPane.showInputDialog("Disciplina " + (pos+1));
 					String notaDisciplina = JOptionPane.showInputDialog("Nota");
 
 					double notas = Double.valueOf(notaDisciplina);
@@ -103,29 +106,29 @@ public class Teste {
 				}
 			}
 
-			System.out.println("------------------Lista dos aprovados----------------------\n");
+			JOptionPane.showMessageDialog(null,"Lista dos aprovados:\n");
 			for (Aluno aluno1 : maps.get(statusAluno.APROVADO)) {
-				System.out.println("Nome: " + aluno1.getNome() + " " + aluno1.getAlunoAprovado2() + " com média de: "
+				JOptionPane.showMessageDialog(null,"Nome: " + aluno1.getNome() + " " + aluno1.getAlunoAprovado2() + " com média de: "
 						+ aluno1.getMediaNota() + "\n");
 			}
 
-			System.out.println("------------------Lista dos reprovados----------------------\n");
+			JOptionPane.showMessageDialog(null, "Lista dos reprovados:\n");
 			for (Aluno aluno1 : maps.get(statusAluno.REPROVADO)) {
-				System.out.println("Nome: " + aluno1.getNome() + " " + aluno1.getAlunoAprovado2() + " com média de: "
+				JOptionPane.showMessageDialog(null,"Nome: " + aluno1.getNome() + " " + aluno1.getAlunoAprovado2() + " com média de: "
 						+ aluno1.getMediaNota() + "\n");
 			}
 
-			System.out.println("------------------Lista dos alunos em recuperação----------------------\n");
+			JOptionPane.showMessageDialog(null, "Lista dos alunos em recuperação:\n");
 			for (Aluno aluno1 : maps.get(statusAluno.RECUPERACAO)) {
-				System.out.println("Nome: " + aluno1.getNome() + " " + aluno1.getAlunoAprovado2() + " com média de: "
+				JOptionPane.showMessageDialog(null,"Nome: " + aluno1.getNome() + " " + aluno1.getAlunoAprovado2() + " com média de: "
 						+ aluno1.getMediaNota() + "\n");
 			}
 
-			System.out.println("Alunos maiores e menores de idade:\n");
+			JOptionPane.showMessageDialog(null,"Alunos maiores e menores de idade:\n");
 
 			for (Aluno aluno1 : alunos) {
 
-				System.out.println(aluno1.getNome() + ": " + aluno1.msgMaioridade());
+				JOptionPane.showMessageDialog(null,aluno1.getNome() + ": " + aluno1.msgMaioridade());
 
 			}
 
