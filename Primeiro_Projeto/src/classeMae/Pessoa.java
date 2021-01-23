@@ -1,6 +1,6 @@
 package Aluno;
 
-// Classe pai, ou Master, ou superClasse. Contém atributos comuns entre todos os objetos filhos //
+// Classe pai, ou Master, ou superClasse. Contem atributos comuns entre todos os objetos filhos //
 
 public abstract class  Pessoa {
 	
@@ -14,7 +14,7 @@ public abstract class  Pessoa {
 	protected String nomePai;
 	
 	
-	// O método abstrato que fica na classe abstrata é obrigatório ser implementado nas classes filhas //
+	// O mï¿½todo abstrato que fica na classe abstrata ï¿½ obrigatï¿½rio ser implementado nas classes filhas //
 	public abstract double salario();
 	
 	public String getNome() {
@@ -60,7 +60,7 @@ public abstract class  Pessoa {
 		this.nomePai = nomePai;
 	}
 	
-	//* Na super classe Pessoa implementei esse método, que poderá ser usado por todas as outras classes filhas *//
+	//* Na super classe Pessoa implementei esse mï¿½todo, que poderï¿½ ser usado por todas as outras classes filhas *//
 	public boolean pessoaMaioridade() {
 		
 		return idade >= 18;
