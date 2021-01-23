@@ -14,7 +14,7 @@ public abstract class  Pessoa {
 	protected String nomePai;
 	
 	
-	// O m�todo abstrato que fica na classe abstrata � obrigat�rio ser implementado nas classes filhas //
+	
 	public abstract double salario();
 	
 	public String getNome() {
@@ -60,7 +60,7 @@ public abstract class  Pessoa {
 		this.nomePai = nomePai;
 	}
 	
-	//* Na super classe Pessoa implementei esse m�todo, que poder� ser usado por todas as outras classes filhas *//
+	
 	public boolean pessoaMaioridade() {
 		
 		return idade >= 18;
